@@ -1,4 +1,4 @@
-<h1 align="center"> Jogo da Adivinhação </h1>
+<h1 align="center"> Biscoito da sorte </h1>
 
 
 <p align="center">
