@@ -10,12 +10,13 @@
 }
 
 body {
-  height: 80vh;
-  background: linear-gradient(
-    45deg,
-    rgba(25, 3, 97, 1) 0%,
-    rgba(187, 0, 255, 1) 100%
-  );
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+  height: 100vh;
+  width: 100vw;
 }
 
 .hide {
@@ -70,10 +71,9 @@ div {
 
   filter: drop-shadow(0 0 0.75rem black);
   width: 42.8rem;
+  height: fit-content;
   background: #ffffff;
 
-  margin-inline: auto;
-  margin-block: 20vh;
   padding: 5rem;
 }
 
@@ -108,7 +108,14 @@ button:hover {
   animation: vibrate-2 0.3s linear infinite both;
 }
 
-/* ======================= nimações ======================= */
+/* ======================= mobile ======================= */
+@media (max-width: 580px) {
+  div {
+    scale: 0.7;
+  }
+}
+
+/* ======================= animações ======================= */
 
 @-webkit-keyframes vibrate-2 {
   0% {
@@ -160,5 +167,24 @@ button:hover {
   100% {
     -webkit-transform: translate(0);
     transform: translate(0);
+  }
+}
+
+/* ============== Background color change ================= */
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #190361;
+  }
+  100% {
+    background: #bb00ff;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #190361;
+  }
+  100% {
+    background: #bb00ff;
   }
 }
